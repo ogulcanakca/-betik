@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "αbetik", "αbetik\αbetik.csproj", "{4FDFA1C7-B178-4A67-9605-81046510614F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FDFA1C7-B178-4A67-9605-81046510614F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FDFA1C7-B178-4A67-9605-81046510614F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FDFA1C7-B178-4A67-9605-81046510614F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FDFA1C7-B178-4A67-9605-81046510614F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D60E52D3-02F8-42D6-A02B-AA294F13FC0B}
+	EndGlobalSection
+EndGlobal
