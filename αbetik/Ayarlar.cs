@@ -16,7 +16,6 @@ namespace αbetik
         
         public IManagerPanelInformationService _iManagerPanelInformationService;
         public IPublishingInformationService _iPublishingInformationService;
-        //deneme
 
         public Ayarlar()
         {
