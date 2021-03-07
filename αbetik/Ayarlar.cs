@@ -38,7 +38,7 @@ namespace αbetik
         public void Ayarlar_Load(object sender, EventArgs e)
         {
             idGetir();
-            lblRules.Text = dgwRules.CurrentRow.Cells[2].Value.ToString();
+            //lblRules.Text = dgwRules.CurrentRow.Cells[2].Value.ToString();
             
 
         }
@@ -173,16 +173,20 @@ namespace αbetik
             //label1.Text = Sqlbaglan.NesneVer().thisQuery.ExecuteScalar().ToString();
             //Sqlbaglan.NesneVer().thisConn.Close();
 
+            int Id = Convert.ToInt32(dgwRules.CurrentRow.Cells[0].Value);
+            int TC = Convert.ToInt32(dgwRules.CurrentRow.Cells[1].Value);
+            string Kurallar = dgwRules.CurrentRow.Cells[2].Value.ToString();
 
 
             _iPublishingInformationService.Add(new PublishingInformation
             {
-                ID = Convert.ToInt32(tbxId.Text),
-                TC = Convert.ToInt32(tbxTC.Text),
-                    Kurallar = dgwRules.CurrentRow.Cells[2].Value.ToString()
+                Id = Id,
+                TC = TC,
+                Kurallar = Kurallar
+
             }) ;
-                Kurallar kurallar = new Kurallar();
-                kurallar.KuralGetir();
+            Kurallar kurallar = new Kurallar();
+            kurallar.KuralGetir();
         }
 
         private void tbxSearchId_TextChanged(object sender, EventArgs e)

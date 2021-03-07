@@ -47,6 +47,9 @@
             this.lblId = new System.Windows.Forms.Label();
             this.tbxSearchId = new System.Windows.Forms.TextBox();
             this.lblRules = new System.Windows.Forms.Label();
+            this.lbl2 = new System.Windows.Forms.Label();
+            this.lbl3 = new System.Windows.Forms.Label();
+            this.lbl1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwRules)).BeginInit();
@@ -168,7 +171,6 @@
             // 
             this.tbxId.Location = new System.Drawing.Point(25, 18);
             this.tbxId.Name = "tbxId";
-            this.tbxId.ReadOnly = true;
             this.tbxId.Size = new System.Drawing.Size(20, 20);
             this.tbxId.TabIndex = 12;
             // 
@@ -229,11 +231,38 @@
             // lblRules
             // 
             this.lblRules.AutoSize = true;
-            this.lblRules.Location = new System.Drawing.Point(44, 298);
+            this.lblRules.Location = new System.Drawing.Point(12, 283);
             this.lblRules.Name = "lblRules";
-            this.lblRules.Size = new System.Drawing.Size(35, 13);
+            this.lblRules.Size = new System.Drawing.Size(44, 13);
             this.lblRules.TabIndex = 14;
-            this.lblRules.Text = "label2";
+            this.lblRules.Text = "lblRules";
+            // 
+            // lbl2
+            // 
+            this.lbl2.AutoSize = true;
+            this.lbl2.Location = new System.Drawing.Point(49, 307);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(23, 13);
+            this.lbl2.TabIndex = 15;
+            this.lbl2.Text = "lbl2";
+            // 
+            // lbl3
+            // 
+            this.lbl3.AutoSize = true;
+            this.lbl3.Location = new System.Drawing.Point(82, 283);
+            this.lbl3.Name = "lbl3";
+            this.lbl3.Size = new System.Drawing.Size(23, 13);
+            this.lbl3.TabIndex = 16;
+            this.lbl3.Text = "lbl3";
+            // 
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.Location = new System.Drawing.Point(59, 323);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(23, 13);
+            this.lbl1.TabIndex = 17;
+            this.lbl1.Text = "lbl1";
             // 
             // Ayarlar
             // 
@@ -242,6 +271,9 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(413, 350);
             this.ControlBox = false;
+            this.Controls.Add(this.lbl1);
+            this.Controls.Add(this.lbl3);
+            this.Controls.Add(this.lbl2);
             this.Controls.Add(this.lblRules);
             this.Controls.Add(this.tbxRules);
             this.Controls.Add(this.dgwRules);
@@ -287,5 +319,8 @@
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblRules;
+        private System.Windows.Forms.Label lbl2;
+        private System.Windows.Forms.Label lbl3;
+        private System.Windows.Forms.Label lbl1;
     }
 }

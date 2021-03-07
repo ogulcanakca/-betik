@@ -8,7 +8,8 @@ namespace αbetik
 {
     public class PublishingInformation : IEntity
     {
-        public int ID { get; set; }
+        
+        public int Id { get; set; }
         public int TC { get; set; }
         public string Kurallar { get; set; }
     }
