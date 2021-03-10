@@ -31,8 +31,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnMin = new System.Windows.Forms.Button();
-            this.dgwPublishingRules = new System.Windows.Forms.DataGridView();
             this.btnPublishing = new System.Windows.Forms.Button();
+            this.dgwPublishingRules = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPublishingRules)).BeginInit();
             this.SuspendLayout();
@@ -72,17 +72,9 @@
             this.btnMin.UseVisualStyleBackColor = false;
             this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
-            // dgwPublishingRules
-            // 
-            this.dgwPublishingRules.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwPublishingRules.Location = new System.Drawing.Point(12, 26);
-            this.dgwPublishingRules.Name = "dgwPublishingRules";
-            this.dgwPublishingRules.Size = new System.Drawing.Size(329, 150);
-            this.dgwPublishingRules.TabIndex = 3;
-            // 
             // btnPublishing
             // 
-            this.btnPublishing.Location = new System.Drawing.Point(122, 183);
+            this.btnPublishing.Location = new System.Drawing.Point(129, 415);
             this.btnPublishing.Name = "btnPublishing";
             this.btnPublishing.Size = new System.Drawing.Size(75, 23);
             this.btnPublishing.TabIndex = 4;
@@ -90,14 +82,28 @@
             this.btnPublishing.UseVisualStyleBackColor = true;
             this.btnPublishing.Click += new System.EventHandler(this.btnPublishing_Click);
             // 
+            // dgwPublishingRules
+            // 
+            this.dgwPublishingRules.AllowUserToResizeColumns = false;
+            this.dgwPublishingRules.AllowUserToResizeRows = false;
+            this.dgwPublishingRules.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgwPublishingRules.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgwPublishingRules.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgwPublishingRules.Location = new System.Drawing.Point(13, 27);
+            this.dgwPublishingRules.Name = "dgwPublishingRules";
+            this.dgwPublishingRules.ReadOnly = true;
+            this.dgwPublishingRules.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgwPublishingRules.Size = new System.Drawing.Size(325, 382);
+            this.dgwPublishingRules.TabIndex = 5;
+            // 
             // Kurallar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(350, 450);
-            this.Controls.Add(this.btnPublishing);
             this.Controls.Add(this.dgwPublishingRules);
+            this.Controls.Add(this.btnPublishing);
             this.Controls.Add(this.btnMin);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pictureBox1);
@@ -119,7 +125,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnMin;
-        private System.Windows.Forms.DataGridView dgwPublishingRules;
         private System.Windows.Forms.Button btnPublishing;
+        private System.Windows.Forms.DataGridView dgwPublishingRules;
     }
 }

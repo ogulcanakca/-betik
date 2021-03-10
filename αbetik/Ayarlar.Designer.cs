@@ -46,10 +46,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.tbxSearchId = new System.Windows.Forms.TextBox();
-            this.lblRules = new System.Windows.Forms.Label();
-            this.lbl2 = new System.Windows.Forms.Label();
-            this.lbl3 = new System.Windows.Forms.Label();
-            this.lbl1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwRules)).BeginInit();
@@ -117,14 +113,14 @@
             this.tbxRules.Location = new System.Drawing.Point(12, 167);
             this.tbxRules.Multiline = true;
             this.tbxRules.Name = "tbxRules";
-            this.tbxRules.Size = new System.Drawing.Size(394, 113);
+            this.tbxRules.Size = new System.Drawing.Size(394, 108);
             this.tbxRules.TabIndex = 5;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(216, 17);
+            this.btnAdd.Location = new System.Drawing.Point(296, 12);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(58, 22);
+            this.btnAdd.Size = new System.Drawing.Size(87, 22);
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Ekle";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -132,9 +128,9 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(216, 40);
+            this.btnDelete.Location = new System.Drawing.Point(296, 35);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(58, 22);
+            this.btnDelete.Size = new System.Drawing.Size(87, 22);
             this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Sil";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -142,9 +138,9 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(152, 17);
+            this.btnUpdate.Location = new System.Drawing.Point(203, 12);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(58, 22);
+            this.btnUpdate.Size = new System.Drawing.Size(87, 22);
             this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Güncelle";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -152,9 +148,9 @@
             // 
             // btnPublish
             // 
-            this.btnPublish.Location = new System.Drawing.Point(152, 40);
+            this.btnPublish.Location = new System.Drawing.Point(203, 35);
             this.btnPublish.Name = "btnPublish";
-            this.btnPublish.Size = new System.Drawing.Size(58, 22);
+            this.btnPublish.Size = new System.Drawing.Size(87, 22);
             this.btnPublish.TabIndex = 9;
             this.btnPublish.Text = "Yayınla";
             this.btnPublish.UseVisualStyleBackColor = true;
@@ -162,16 +158,16 @@
             // 
             // tbxTC
             // 
-            this.tbxTC.Location = new System.Drawing.Point(76, 19);
+            this.tbxTC.Location = new System.Drawing.Point(96, 19);
             this.tbxTC.Name = "tbxTC";
-            this.tbxTC.Size = new System.Drawing.Size(75, 20);
+            this.tbxTC.Size = new System.Drawing.Size(79, 20);
             this.tbxTC.TabIndex = 10;
             // 
             // tbxId
             // 
-            this.tbxId.Location = new System.Drawing.Point(25, 18);
+            this.tbxId.Location = new System.Drawing.Point(45, 18);
             this.tbxId.Name = "tbxId";
-            this.tbxId.Size = new System.Drawing.Size(20, 20);
+            this.tbxId.Size = new System.Drawing.Size(24, 20);
             this.tbxId.TabIndex = 12;
             // 
             // gbxFeatures
@@ -186,9 +182,9 @@
             this.gbxFeatures.Controls.Add(this.btnDelete);
             this.gbxFeatures.Controls.Add(this.btnUpdate);
             this.gbxFeatures.Controls.Add(this.btnPublish);
-            this.gbxFeatures.Location = new System.Drawing.Point(124, 281);
+            this.gbxFeatures.Location = new System.Drawing.Point(12, 281);
             this.gbxFeatures.Name = "gbxFeatures";
-            this.gbxFeatures.Size = new System.Drawing.Size(277, 65);
+            this.gbxFeatures.Size = new System.Drawing.Size(389, 65);
             this.gbxFeatures.TabIndex = 13;
             this.gbxFeatures.TabStop = false;
             this.gbxFeatures.Text = "İşlemler";
@@ -196,7 +192,7 @@
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(97, 45);
+            this.lblSearch.Location = new System.Drawing.Point(117, 45);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(23, 13);
             this.lblSearch.TabIndex = 16;
@@ -205,7 +201,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 21);
+            this.label1.Location = new System.Drawing.Point(67, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 15;
@@ -214,7 +210,7 @@
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(2, 21);
+            this.lblId.Location = new System.Drawing.Point(22, 21);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(22, 13);
             this.lblId.TabIndex = 14;
@@ -222,47 +218,11 @@
             // 
             // tbxSearchId
             // 
-            this.tbxSearchId.Location = new System.Drawing.Point(126, 42);
+            this.tbxSearchId.Location = new System.Drawing.Point(146, 42);
             this.tbxSearchId.Name = "tbxSearchId";
-            this.tbxSearchId.Size = new System.Drawing.Size(20, 20);
+            this.tbxSearchId.Size = new System.Drawing.Size(24, 20);
             this.tbxSearchId.TabIndex = 13;
             this.tbxSearchId.TextChanged += new System.EventHandler(this.tbxSearchId_TextChanged);
-            // 
-            // lblRules
-            // 
-            this.lblRules.AutoSize = true;
-            this.lblRules.Location = new System.Drawing.Point(12, 283);
-            this.lblRules.Name = "lblRules";
-            this.lblRules.Size = new System.Drawing.Size(44, 13);
-            this.lblRules.TabIndex = 14;
-            this.lblRules.Text = "lblRules";
-            // 
-            // lbl2
-            // 
-            this.lbl2.AutoSize = true;
-            this.lbl2.Location = new System.Drawing.Point(49, 307);
-            this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(23, 13);
-            this.lbl2.TabIndex = 15;
-            this.lbl2.Text = "lbl2";
-            // 
-            // lbl3
-            // 
-            this.lbl3.AutoSize = true;
-            this.lbl3.Location = new System.Drawing.Point(82, 283);
-            this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(23, 13);
-            this.lbl3.TabIndex = 16;
-            this.lbl3.Text = "lbl3";
-            // 
-            // lbl1
-            // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(59, 323);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(23, 13);
-            this.lbl1.TabIndex = 17;
-            this.lbl1.Text = "lbl1";
             // 
             // Ayarlar
             // 
@@ -271,10 +231,6 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(413, 350);
             this.ControlBox = false;
-            this.Controls.Add(this.lbl1);
-            this.Controls.Add(this.lbl3);
-            this.Controls.Add(this.lbl2);
-            this.Controls.Add(this.lblRules);
             this.Controls.Add(this.tbxRules);
             this.Controls.Add(this.dgwRules);
             this.Controls.Add(this.btnClose);
@@ -318,9 +274,5 @@
         public System.Windows.Forms.Label lblSearch;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.Label lblRules;
-        private System.Windows.Forms.Label lbl2;
-        private System.Windows.Forms.Label lbl3;
-        private System.Windows.Forms.Label lbl1;
     }
 }

@@ -38,6 +38,7 @@ namespace αbetik
         public void Ayarlar_Load(object sender, EventArgs e)
         {
             idGetir();
+            
             //lblRules.Text = dgwRules.CurrentRow.Cells[2].Value.ToString();
             
 
@@ -161,7 +162,9 @@ namespace αbetik
             this.WindowState = FormWindowState.Minimized;
         }
         
-       
+        int Id;
+        static int TC;
+        static string Kurallar;
         public void btnPublish_Click(object sender, EventArgs e)
         {
 
@@ -173,9 +176,9 @@ namespace αbetik
             //label1.Text = Sqlbaglan.NesneVer().thisQuery.ExecuteScalar().ToString();
             //Sqlbaglan.NesneVer().thisConn.Close();
 
-            int Id = Convert.ToInt32(dgwRules.CurrentRow.Cells[0].Value);
-            int TC = Convert.ToInt32(dgwRules.CurrentRow.Cells[1].Value);
-            string Kurallar = dgwRules.CurrentRow.Cells[2].Value.ToString();
+            
+            TC = Convert.ToInt32(dgwRules.CurrentRow.Cells[1].Value);
+            Kurallar =dgwRules.CurrentRow.Cells[2].Value.ToString();
 
 
             _iPublishingInformationService.Add(new PublishingInformation

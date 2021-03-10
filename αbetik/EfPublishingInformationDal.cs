@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace αbetik
 {
-    public class EfPublishingInformationDal : EfEntityRepositoryBase<PublishingInformation, PublishingInformationContext>, IPublishingInformationDal
+    public class EfPublishingInformationDal : EfEntityRepositoryBase<PublishingInformation, ManagerPanelContext>, IPublishingInformationDal
     {
     }
 }

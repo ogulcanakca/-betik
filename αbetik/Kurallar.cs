@@ -15,6 +15,7 @@ namespace αbetik
     {
         Ayarlar ayarlar = new Ayarlar();
         public IPublishingInformationService _iPublishingInformationService;
+        public IManagerPanelInformationService _iManagerPanelInformationService;
         
         public Kurallar()
         {
@@ -25,15 +26,41 @@ namespace αbetik
         private void Kurallar_Load(object sender, EventArgs e)
         {
 
-            dgwPublishingRules.DataSource = _iPublishingInformationService.GetAll();
+            KuralGetir();
 
+        }
+        public void Araç()
+        {
+            dgwPublishingRules.DataSource = _iPublishingInformationService.GetAll();
+            dgwPublishingRules.Columns["Id"].Visible = false;
+            dgwPublishingRules.Columns["TC"].Visible = false;
         }
         public void KuralGetir()
         {
-            dgwPublishingRules.DataSource = _iPublishingInformationService.GetPublishingInformationRulesByTC(Convert.ToInt32(ayarlar.tbxTC.Text));
-            
+            Araç();
+            if (dgwPublishingRules.RowCount == 0)
+            {
+                try
+                {
+                    _iPublishingInformationService.Add(new PublishingInformation
+                    {
+                        
+                        TC = 123123,
+                        Kurallar = "Veritabanında yayınlanan veri olmadığı için eklenmiştir, silebilirsiniz."
+                    });
+                    Araç();
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message);
+                }
+
+            }
+           
+               
+
+            //dgwPublishingRules.DataSource = _iManagerPanelInformationService.GetPublishingInformationRulesByTC(Convert.ToInt32(ayarlar.tbxTC.Text));
         }
-        
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -51,7 +78,7 @@ namespace αbetik
 
         private void btnPublishing_Click(object sender, EventArgs e)
         {
-            
+                       
         }
     }
 }

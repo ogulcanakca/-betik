@@ -11,6 +11,7 @@ namespace αbetik
         List<ManagerPanelInformation> GetAll();
         List<ManagerPanelInformation> Get();
         List<ManagerPanelInformation> GetManagerPanelInformationById(int managerPanelInformation);
+        //List<ManagerPanelInformation> GetPublishingInformationRulesByTC(int publishingInformationTC);
         void Add(ManagerPanelInformation managerPanelInformation);
         
         void Update(ManagerPanelInformation managerPanelInformation);
