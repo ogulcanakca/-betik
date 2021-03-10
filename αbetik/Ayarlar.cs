@@ -60,7 +60,7 @@ namespace αbetik
                 _iManagerPanelInformationService.Add(new ManagerPanelInformation
                 {
                     Id = Convert.ToInt32(tbxId.Text),
-                    TC = Convert.ToInt32(tbxTC.Text),
+                    TC = Convert.ToInt64(tbxTC.Text),
                     Kurallar = tbxRules.Text
                 });
                 MessageBox.Show("Ürün eklendi!");
@@ -143,7 +143,7 @@ namespace αbetik
             _iManagerPanelInformationService.Update(new ManagerPanelInformation
             {
                 Id = Convert.ToInt32(tbxId.Text),
-                TC = Convert.ToInt32(tbxTC.Text),
+                TC = Convert.ToInt64(tbxTC.Text),
                 Kurallar = tbxRules.Text
             });
 
@@ -162,8 +162,8 @@ namespace αbetik
             this.WindowState = FormWindowState.Minimized;
         }
         
-        int Id;
-        static int TC;
+        static int Id;
+        static long TC;
         static string Kurallar;
         public void btnPublish_Click(object sender, EventArgs e)
         {
@@ -177,7 +177,7 @@ namespace αbetik
             //Sqlbaglan.NesneVer().thisConn.Close();
 
             
-            TC = Convert.ToInt32(dgwRules.CurrentRow.Cells[1].Value);
+            TC = Convert.ToInt64(dgwRules.CurrentRow.Cells[1].Value);
             Kurallar =dgwRules.CurrentRow.Cells[2].Value.ToString();
 
 

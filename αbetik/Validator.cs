@@ -10,18 +10,14 @@ namespace αbetik
 
     public class Validator : AbstractValidator<ManagerPanelInformation>
     {
-        //public Validator()
-        //{
-        //    RuleFor(p => p.TC).NotEmpty().WithMessage("TC kısmı boş bırakılmamalıdır.");
-        //    RuleFor(t => t.Kurallar).NotEmpty().WithMessage("Kurallar kısmı boş bırakılmamalıdır.");
-        //    RuleFor(c => c.TC).Must(Be11Digits).WithMessage("TC kısmı boş bırakılmamalıdır.");
-        //}
+        public Validator()
+        {
+            RuleFor(p => p.TC).NotEmpty().WithMessage("TC kısmı boş bırakılmamalıdır.");
+            RuleFor(t => t.Kurallar).NotEmpty().WithMessage("Kurallar kısmı boş bırakılmamalıdır.");
+            RuleFor(c => c.TC).InclusiveBetween(9999999999,99999999999).WithMessage("Az veya çok haneli TC girildi.");
+            
+        }
 
-
-        //private bool Be11Digits(long arg)
-        //{
-
-        //    return Convert.ToBoolean(arg.CompareTo(arg < 9999999999 && arg >= 99999999999));
-        //}
     }
+    
 }
