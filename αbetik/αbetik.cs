@@ -15,7 +15,8 @@ namespace αbetik
 
     public partial class αbetik : Form
     {
-
+        
+       
         
         private IInformationService _informationService;
 
@@ -41,9 +42,10 @@ namespace αbetik
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void αbetik_Load(object sender, EventArgs e)
+        public void αbetik_Load(object sender, EventArgs e)
         {
             LoadInformations();
+           
         }
         
         private void btnAdd_Click(object sender, EventArgs e)
@@ -69,9 +71,10 @@ namespace αbetik
                 MessageBox.Show(exception.Message);
             }
         }
-
+        
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            
             if (dgwInformations.CurrentRow != null)
             {
                 try

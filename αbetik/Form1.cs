@@ -64,7 +64,8 @@ namespace αbetik
 
         }
 
-     
+        
+
         public void tbxTC_TextChanged(object sender, EventArgs e)
         {
 

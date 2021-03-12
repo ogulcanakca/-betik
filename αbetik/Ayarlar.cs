@@ -13,7 +13,9 @@ namespace αbetik
 {
     public partial class Ayarlar : Form
     {
+        Form1 form1 = new Form1();
         
+
         public IManagerPanelInformationService _iManagerPanelInformationService;
         public IPublishingInformationService _iPublishingInformationService;
 
@@ -39,8 +41,8 @@ namespace αbetik
         public void Ayarlar_Load(object sender, EventArgs e)
         {
             //idGetir();
-            
-            
+            //dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(Convert.ToInt64(form1.tbxTC.Text));
+
             //lblRules.Text = dgwRules.CurrentRow.Cells[2].Value.ToString();
 
 
@@ -164,7 +166,7 @@ namespace αbetik
             this.WindowState = FormWindowState.Minimized;
         }
         
-        static int Id;
+        public int Id;
         static long TC;
         static string Kurallar;
         public void btnPublish_Click(object sender, EventArgs e)
