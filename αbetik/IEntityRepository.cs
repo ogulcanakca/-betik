@@ -14,6 +14,7 @@ namespace αbetik
         void Update(T entity);
         void Delete(T entity);      
         List<T> GetId(Expression<Func<T, bool>> filter = null);
+        List<T> GetTC(Expression<Func<T, bool>> filter = null);
         List<T> Get(Expression<Func<T, bool>> filter = null);
         
     }

@@ -71,6 +71,7 @@
             this.tbxTC.Name = "tbxTC";
             this.tbxTC.Size = new System.Drawing.Size(73, 20);
             this.tbxTC.TabIndex = 2;
+            this.tbxTC.TextChanged += new System.EventHandler(this.tbxTC_TextChanged);
             // 
             // btnTC
             // 
@@ -132,10 +133,10 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.TextBox tbxTC;
         private System.Windows.Forms.Button btnTC;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.TextBox tbxTC;
     }
 }
 

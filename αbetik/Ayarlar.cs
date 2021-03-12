@@ -35,15 +35,17 @@ namespace αbetik
             
 
         }
+       
         public void Ayarlar_Load(object sender, EventArgs e)
         {
-            idGetir();
+            //idGetir();
+            
             
             //lblRules.Text = dgwRules.CurrentRow.Cells[2].Value.ToString();
-            
+
 
         }
-
+        
         private void btnAdd_Click(object sender, EventArgs e)
         {
 

@@ -47,12 +47,24 @@ namespace αbetik
             return _managerPanelInformationDal.GetAll();
         }
 
+        public List<ManagerPanelInformation> GetManagerPanelInformationByTC(long managerPanelInformation)
+        {
+            return _managerPanelInformationDal.GetAll(p => p.TC == managerPanelInformation);
+            
+        }
         public List<ManagerPanelInformation> GetManagerPanelInformationById(int managerPanelInformation)
         {
             return _managerPanelInformationDal.GetAll(p => p.Id == managerPanelInformation);
-            
+
         }
 
-        
+        public List<ManagerPanelInformation> GetTC()
+        {
+            return _managerPanelInformationDal.GetTC();
+        }
+        public List<ManagerPanelInformation> GetId()
+        {
+            return _managerPanelInformationDal.GetId();
+        }
     }
 }

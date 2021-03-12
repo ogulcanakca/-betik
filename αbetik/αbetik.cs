@@ -15,12 +15,13 @@ namespace αbetik
 
     public partial class αbetik : Form
     {
-        
 
+        
         private IInformationService _informationService;
 
         public αbetik()
         {
+            
             InitializeComponent();
 
             _informationService = InstanceFactory.GetInstance<IInformationService>();
@@ -42,10 +43,9 @@ namespace αbetik
 
         private void αbetik_Load(object sender, EventArgs e)
         {
-
             LoadInformations();
         }
-
+        
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try

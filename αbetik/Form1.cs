@@ -13,9 +13,10 @@ namespace αbetik
 {
     public partial class Form1 : Form
     {
-        
+        public IManagerPanelInformationService _iManagerPanelInformationService;
         public Form1()
         {
+            _iManagerPanelInformationService = InstanceFactory.GetInstance<IManagerPanelInformationService>();
             InitializeComponent();
         }
 
@@ -47,18 +48,39 @@ namespace αbetik
             //{
                 αbetik αbetik = new αbetik();
                 αbetik.Show();
-                this.Hide();
+            this.Hide();
             //}
             //else
             //{
             //    MessageBox.Show("Girilen TC yanlış ya da kayıtlı değil.");
             //}
             //Sqlbaglan.NesneVer().thisOleConn.Close();
+
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
+
+     
+        public void tbxTC_TextChanged(object sender, EventArgs e)
+        {
+
+            Ayarlar ayarlar = new Ayarlar();
+
+            if (!String.IsNullOrEmpty(tbxTC.Text))
+            {
+                ayarlar.dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(Convert.ToInt64(tbxTC.Text));
+
+            }
+            else
+            {
+                ayarlar.idGetir();
+            }
+
+        }
+        
     }
 }

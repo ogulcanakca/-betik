@@ -261,7 +261,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnMin;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.DataGridView dgwRules;
         private System.Windows.Forms.TextBox tbxRules;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
@@ -274,5 +273,6 @@
         public System.Windows.Forms.Label lblSearch;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label lblId;
+        public System.Windows.Forms.DataGridView dgwRules;
     }
 }
