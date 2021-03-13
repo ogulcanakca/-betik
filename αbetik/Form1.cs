@@ -34,7 +34,7 @@ namespace αbetik
         {
 
         }
-
+        public long TC;
         private void btnTC_Click(object sender, EventArgs e)
         {
             //string tc = tbxTC.Text;
@@ -49,6 +49,7 @@ namespace αbetik
                 αbetik αbetik = new αbetik();
                 αbetik.Show();
             this.Hide();
+            
             //}
             //else
             //{
@@ -63,23 +64,23 @@ namespace αbetik
         {
 
         }
-
+      
         
 
         public void tbxTC_TextChanged(object sender, EventArgs e)
         {
-
+            TC = Convert.ToInt64(tbxTC.Text);
             Ayarlar ayarlar = new Ayarlar();
+            ayarlar.TCC = TC;
+            //if (!String.IsNullOrEmpty(tbxTC.Text))
+            //{
+            //    ayarlar.dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(Convert.ToInt64(tbxTC.Text));
 
-            if (!String.IsNullOrEmpty(tbxTC.Text))
-            {
-                ayarlar.dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(Convert.ToInt64(tbxTC.Text));
-
-            }
-            else
-            {
-                ayarlar.idGetir();
-            }
+            //}
+            //else
+            //{
+            //    ayarlar.idGetir();
+            //}
 
         }
         

@@ -37,14 +37,14 @@ namespace αbetik
             
 
         }
-       
+        public long TCC;
         public void Ayarlar_Load(object sender, EventArgs e)
         {
             //idGetir();
             //dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(Convert.ToInt64(form1.tbxTC.Text));
 
             //lblRules.Text = dgwRules.CurrentRow.Cells[2].Value.ToString();
-
+            dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(TCC);
 
         }
         
