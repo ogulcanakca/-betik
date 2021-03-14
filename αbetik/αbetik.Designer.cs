@@ -51,6 +51,7 @@
             this.btnHowManyPeople = new System.Windows.Forms.Button();
             this.btnKurallar = new System.Windows.Forms.Button();
             this.btnAyarlar = new System.Windows.Forms.Button();
+            this.tbxTCC = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwInformations)).BeginInit();
             this.gbxInformation.SuspendLayout();
@@ -278,12 +279,22 @@
             this.btnAyarlar.UseVisualStyleBackColor = false;
             this.btnAyarlar.Click += new System.EventHandler(this.btnAyarlar_Click);
             // 
+            // tbxTCC
+            // 
+            this.tbxTCC.Location = new System.Drawing.Point(279, 385);
+            this.tbxTCC.Name = "tbxTCC";
+            this.tbxTCC.Size = new System.Drawing.Size(100, 20);
+            this.tbxTCC.TabIndex = 26;
+            this.tbxTCC.Visible = false;
+            this.tbxTCC.TextChanged += new System.EventHandler(this.tbxTCC_TextChanged);
+            // 
             // αbetik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tbxTCC);
             this.Controls.Add(this.btnAyarlar);
             this.Controls.Add(this.btnKurallar);
             this.Controls.Add(this.gbxHowManyPeople);
@@ -309,6 +320,7 @@
             this.gbxHowManyPeople.ResumeLayout(false);
             this.gbxHowManyPeople.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -335,6 +347,7 @@
         private System.Windows.Forms.Label lblHowManyPeople;
         private System.Windows.Forms.Button btnHowManyPeople;
         private System.Windows.Forms.Button btnKurallar;
-        private System.Windows.Forms.Button btnAyarlar;
+        public System.Windows.Forms.TextBox tbxTCC;
+        public System.Windows.Forms.Button btnAyarlar;
     }
 }

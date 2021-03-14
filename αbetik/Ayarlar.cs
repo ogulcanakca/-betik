@@ -13,21 +13,21 @@ namespace αbetik
 {
     public partial class Ayarlar : Form
     {
-        Form1 form1 = new Form1();
         
-
+        
         public IManagerPanelInformationService _iManagerPanelInformationService;
         public IPublishingInformationService _iPublishingInformationService;
 
         public Ayarlar()
         {
 
+            
             _iManagerPanelInformationService = InstanceFactory.GetInstance<IManagerPanelInformationService>();
             _iPublishingInformationService = InstanceFactory.GetInstance<IPublishingInformationService>();
             InitializeComponent();
         }
 
-       
+
         private void dgwRules_CellClick(object sender, DataGridViewCellEventArgs e)
         {
            
@@ -37,17 +37,17 @@ namespace αbetik
             
 
         }
-        public long TCC;
         public void Ayarlar_Load(object sender, EventArgs e)
         {
             //idGetir();
             //dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(Convert.ToInt64(form1.tbxTC.Text));
-
+            αbetik αbetik = new αbetik();
+            var f1 = new αbetik();
+            f1.ayarlar = this;
+            
             //lblRules.Text = dgwRules.CurrentRow.Cells[2].Value.ToString();
-            dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(TCC);
-
         }
-        
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
@@ -76,8 +76,15 @@ namespace αbetik
             }
 
 
+            //this.Controls.Clear();
+            //this.InitializeComponent();
 
-            idGetir();
+            //dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(Convert.ToInt64(tbxTCCC.Text));
+            αbetik αbetik = new αbetik();
+            αbetik.btnAyarlar_Click(new object(), EventArgs.Empty);
+            tbxTCCC.Text = αbetik.tbxTCC.Text;
+            this.Hide();
+            //idGetir();
 
         }
         public void idGetir()
@@ -158,7 +165,7 @@ namespace αbetik
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void btnMin_Click(object sender, EventArgs e)
@@ -216,8 +223,24 @@ namespace αbetik
 
         private void Ayarlar_FormClosing(object sender, FormClosingEventArgs e)
         {
-           // lblRules.Text = dgwRules.CurrentRow.Cells[2].Value.ToString();
+            e.Cancel = true;
+            // lblRules.Text = dgwRules.CurrentRow.Cells[2].Value.ToString();
             
         }
+
+        private void tbxTCCC_TextChanged(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(tbxTCCC.Text))
+            {
+                dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(Convert.ToInt64(tbxTCCC.Text));
+
+            }
+            else
+            {
+                idGetir();
+            }
+
+        }
     }
+
 }

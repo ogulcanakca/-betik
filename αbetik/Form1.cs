@@ -13,6 +13,8 @@ namespace αbetik
 {
     public partial class Form1 : Form
     {
+        public αbetik αbetik = new αbetik();
+
         public IManagerPanelInformationService _iManagerPanelInformationService;
         public Form1()
         {
@@ -34,8 +36,9 @@ namespace αbetik
         {
 
         }
-        public long TC;
-        private void btnTC_Click(object sender, EventArgs e)
+
+  
+        public void btnTC_Click(object sender, EventArgs e)
         {
             //string tc = tbxTC.Text;
             //Sqlbaglan.NesneVer().thisOleConn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.16.0;Data Source=giris.accdb");
@@ -46,10 +49,14 @@ namespace αbetik
             //Sqlbaglan.NesneVer().thisOleDr = Sqlbaglan.NesneVer().thisOleQuery.ExecuteReader();
             //if (Sqlbaglan.NesneVer().thisOleDr.Read())
             //{
-                αbetik αbetik = new αbetik();
+           
+            if (Application.OpenForms["αbetik"] == null)
+            {
                 αbetik.Show();
+            }
             this.Hide();
-            
+            //ayarlar.Show();
+            //αbetik.btnAyarlar_Click(new object(), EventArgs.Empty);
             //}
             //else
             //{
@@ -64,23 +71,14 @@ namespace αbetik
         {
 
         }
-      
-        
 
+
+        
         public void tbxTC_TextChanged(object sender, EventArgs e)
         {
-            TC = Convert.ToInt64(tbxTC.Text);
-            Ayarlar ayarlar = new Ayarlar();
-            ayarlar.TCC = TC;
-            //if (!String.IsNullOrEmpty(tbxTC.Text))
-            //{
-            //    ayarlar.dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(Convert.ToInt64(tbxTC.Text));
+            αbetik.tbxTCC.Text = tbxTC.Text;
 
-            //}
-            //else
-            //{
-            //    ayarlar.idGetir();
-            //}
+
 
         }
         

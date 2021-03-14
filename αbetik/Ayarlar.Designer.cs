@@ -42,10 +42,12 @@
             this.tbxTC = new System.Windows.Forms.TextBox();
             this.tbxId = new System.Windows.Forms.TextBox();
             this.gbxFeatures = new System.Windows.Forms.GroupBox();
+            this.tbxTCC = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.tbxSearchId = new System.Windows.Forms.TextBox();
+            this.tbxTCCC = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwRules)).BeginInit();
@@ -172,6 +174,7 @@
             // 
             // gbxFeatures
             // 
+            this.gbxFeatures.Controls.Add(this.tbxTCC);
             this.gbxFeatures.Controls.Add(this.lblSearch);
             this.gbxFeatures.Controls.Add(this.tbxId);
             this.gbxFeatures.Controls.Add(this.tbxTC);
@@ -188,6 +191,13 @@
             this.gbxFeatures.TabIndex = 13;
             this.gbxFeatures.TabStop = false;
             this.gbxFeatures.Text = "İşlemler";
+            // 
+            // tbxTCC
+            // 
+            this.tbxTCC.Location = new System.Drawing.Point(25, 42);
+            this.tbxTCC.Name = "tbxTCC";
+            this.tbxTCC.Size = new System.Drawing.Size(79, 20);
+            this.tbxTCC.TabIndex = 17;
             // 
             // lblSearch
             // 
@@ -224,6 +234,14 @@
             this.tbxSearchId.TabIndex = 13;
             this.tbxSearchId.TextChanged += new System.EventHandler(this.tbxSearchId_TextChanged);
             // 
+            // tbxTCCC
+            // 
+            this.tbxTCCC.Location = new System.Drawing.Point(214, 98);
+            this.tbxTCCC.Name = "tbxTCCC";
+            this.tbxTCCC.Size = new System.Drawing.Size(100, 20);
+            this.tbxTCCC.TabIndex = 14;
+            this.tbxTCCC.TextChanged += new System.EventHandler(this.tbxTCCC_TextChanged);
+            // 
             // Ayarlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,6 +249,7 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(413, 350);
             this.ControlBox = false;
+            this.Controls.Add(this.tbxTCCC);
             this.Controls.Add(this.tbxRules);
             this.Controls.Add(this.dgwRules);
             this.Controls.Add(this.btnClose);
@@ -256,23 +275,24 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnMin;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.TextBox tbxRules;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnPublish;
         public System.Windows.Forms.TextBox tbxTC;
         public System.Windows.Forms.TextBox tbxId;
-        private System.Windows.Forms.GroupBox gbxFeatures;
         public System.Windows.Forms.TextBox tbxSearchId;
         public System.Windows.Forms.Label lblSearch;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label lblId;
         public System.Windows.Forms.DataGridView dgwRules;
+        public System.Windows.Forms.TextBox tbxTCC;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.Button btnMin;
+        public System.Windows.Forms.Button btnClose;
+        public System.Windows.Forms.TextBox tbxRules;
+        public System.Windows.Forms.GroupBox gbxFeatures;
+        public System.Windows.Forms.TextBox tbxTCCC;
     }
 }

@@ -15,15 +15,17 @@ namespace αbetik
 
     public partial class αbetik : Form
     {
+
+
+        public IManagerPanelInformationService _iManagerPanelInformationService;
+        public IInformationService _informationService;
+        public  Ayarlar ayarlar = new Ayarlar();
         
-       
-        
-        private IInformationService _informationService;
 
         public αbetik()
         {
-            
             InitializeComponent();
+            _iManagerPanelInformationService = InstanceFactory.GetInstance<IManagerPanelInformationService>();
 
             _informationService = InstanceFactory.GetInstance<IInformationService>();
         }
@@ -44,8 +46,12 @@ namespace αbetik
 
         public void αbetik_Load(object sender, EventArgs e)
         {
+
+            
+
             LoadInformations();
            
+
         }
         
         private void btnAdd_Click(object sender, EventArgs e)
@@ -154,13 +160,46 @@ namespace αbetik
 
         }
 
-        private void btnAyarlar_Click(object sender, EventArgs e)
+        
+      
+            
+        
+
+        public void btnAyarlar_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms["Ayarlar"] == null)
-            {
-                Ayarlar ayarlar = new Ayarlar();
+            //if (Application.OpenForms["Ayarlar"] == null)
+            //{
                 ayarlar.Show();
+            //}
+            if (!String.IsNullOrEmpty(tbxTCC.Text))
+            {
+                ayarlar.dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(Convert.ToInt64(tbxTCC.Text));
+
             }
+            else
+            {
+                ayarlar.idGetir();
+            }
+            ayarlar.tbxTCCC.Text = tbxTCC.Text;
+            if (Application.OpenForms["Ayarlar"] != null)
+            {
+                //ayarlar.Hide();
+
+                //ayarlar.Hide();
+                
+                ayarlar.Show();
+
+            }
+            //if (!String.IsNullOrEmpty(ayarlar.tbxTC.Text))
+            //{
+            //    ayarlar.dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(Convert.ToInt64(ayarlar.tbxTC.Text));
+
+            //}
+            //else
+            //{
+            //    ayarlar.idGetir();
+            //}
+
         }
 
         private void btnKurallar_Click(object sender, EventArgs e)
@@ -170,6 +209,11 @@ namespace αbetik
                 Kurallar kurallar = new Kurallar();
                 kurallar.Show();
             }
+        }
+
+        private void tbxTCC_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
