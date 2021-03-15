@@ -47,6 +47,7 @@
             this.lblId = new System.Windows.Forms.Label();
             this.tbxSearchId = new System.Windows.Forms.TextBox();
             this.tbxTCCC = new System.Windows.Forms.TextBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwRules)).BeginInit();
@@ -111,7 +112,7 @@
             // 
             // tbxRules
             // 
-            this.tbxRules.Location = new System.Drawing.Point(12, 167);
+            this.tbxRules.Location = new System.Drawing.Point(11, 167);
             this.tbxRules.Multiline = true;
             this.tbxRules.Name = "tbxRules";
             this.tbxRules.Size = new System.Drawing.Size(394, 108);
@@ -119,9 +120,9 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(296, 17);
+            this.btnAdd.Location = new System.Drawing.Point(259, 17);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(87, 22);
+            this.btnAdd.Size = new System.Drawing.Size(62, 22);
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Ekle";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -129,9 +130,9 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(296, 40);
+            this.btnDelete.Location = new System.Drawing.Point(321, 17);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(87, 22);
+            this.btnDelete.Size = new System.Drawing.Size(62, 22);
             this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Sil";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -139,9 +140,9 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(203, 17);
+            this.btnUpdate.Location = new System.Drawing.Point(197, 17);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(87, 22);
+            this.btnUpdate.Size = new System.Drawing.Size(62, 22);
             this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Güncelle";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -149,9 +150,9 @@
             // 
             // btnPublish
             // 
-            this.btnPublish.Location = new System.Drawing.Point(203, 40);
+            this.btnPublish.Location = new System.Drawing.Point(197, 40);
             this.btnPublish.Name = "btnPublish";
-            this.btnPublish.Size = new System.Drawing.Size(87, 22);
+            this.btnPublish.Size = new System.Drawing.Size(62, 22);
             this.btnPublish.TabIndex = 9;
             this.btnPublish.Text = "Yayınla";
             this.btnPublish.UseVisualStyleBackColor = true;
@@ -174,6 +175,7 @@
             // 
             // gbxFeatures
             // 
+            this.gbxFeatures.Controls.Add(this.radioButton1);
             this.gbxFeatures.Controls.Add(this.lblSearch);
             this.gbxFeatures.Controls.Add(this.tbxId);
             this.gbxFeatures.Controls.Add(this.tbxTC);
@@ -235,6 +237,18 @@
             this.tbxTCCC.Visible = false;
             this.tbxTCCC.TextChanged += new System.EventHandler(this.tbxTCCC_TextChanged);
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(284, 43);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(78, 17);
+            this.radioButton1.TabIndex = 18;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Tümünü Sil";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
             // Ayarlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,5 +300,6 @@
         public System.Windows.Forms.TextBox tbxRules;
         public System.Windows.Forms.GroupBox gbxFeatures;
         public System.Windows.Forms.TextBox tbxTCCC;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

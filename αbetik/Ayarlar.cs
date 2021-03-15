@@ -67,7 +67,7 @@ namespace αbetik
                     TC = Convert.ToInt64(tbxTC.Text),
                     Kurallar = tbxRules.Text
                 });
-                MessageBox.Show("Ürün eklendi!");
+                MessageBox.Show("Kişi bilgisi eklendi!");
 
             }
             catch (Exception exception)
@@ -110,36 +110,47 @@ namespace αbetik
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            
             //Sqlbaglan.NesneVer().thisConn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;initial catalog = ManagerPanel;integrated security = true");
             //Sqlbaglan.NesneVer().thisConn.Open();
             //Sqlbaglan.NesneVer().thisQuery = new SqlCommand("DELETE FROM [Rules] WHERE Kurallar=@Kurallar", Sqlbaglan.NesneVer().thisConn);
             //Sqlbaglan.NesneVer().thisQuery.Parameters.AddWithValue("@Kurallar", tbxRules.Text);
             //Sqlbaglan.NesneVer().thisQuery.ExecuteNonQuery();
             //Sqlbaglan.NesneVer().thisConn.Close();
-            if (dgwRules.CurrentRow != null)
+            if (radioButton1.Checked == true)
             {
-                try
-                {
-                    _iManagerPanelInformationService.Delete(new ManagerPanelInformation
-                    {
-                        Id = Convert.ToInt32(dgwRules.CurrentRow.Cells[0].Value)
-                    });
-                    MessageBox.Show("Ürün silindi!");
-
-                }
-                catch (Exception exception)
-                {
-                    MessageBox.Show(exception.Message);
-                }
-
+                _iManagerPanelInformationService.Delete(new ManagerPanelInformation
+                {   
+                    TC = Convert.ToInt64(dgwRules.CurrentRow.Cells[1].Value)
+                }) ;
+                MessageBox.Show("Tüm kişilerin bilgileri silindi!");
             }
-
-
-            if (!String.IsNullOrEmpty(tbxTCCC.Text))
+            else
             {
-                dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(Convert.ToInt64(tbxTCCC.Text));
+                if (dgwRules.CurrentRow != null)
+                {
+                    try
+                    {
+                        _iManagerPanelInformationService.Delete(new ManagerPanelInformation
+                        {
+                            Id = Convert.ToInt32(dgwRules.CurrentRow.Cells[0].Value)
+                        });
+                        MessageBox.Show("Kişi bilgisi silindi!");
 
+                    }
+                    catch (Exception exception)
+                    {
+                        MessageBox.Show(exception.Message);
+                    }
+
+                }
+
+
+                if (!String.IsNullOrEmpty(tbxTCCC.Text))
+                {
+                    dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(Convert.ToInt64(tbxTCCC.Text));
+
+                }
             }
 
         }
@@ -172,7 +183,7 @@ namespace αbetik
                 Kurallar = tbxRules.Text
             });
 
-
+            MessageBox.Show("Kişi bilgisi güncellendi.");
             if (!String.IsNullOrEmpty(tbxTCCC.Text))
             {
                 dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(Convert.ToInt64(tbxTCCC.Text));
@@ -217,6 +228,7 @@ namespace αbetik
                 Kurallar = Kurallar
 
             }) ;
+            MessageBox.Show("Kural yayınlandı.");
             Kurallar kurallar = new Kurallar();
             kurallar.KuralGetir();
         }
@@ -259,6 +271,11 @@ namespace αbetik
             }
 
 
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }

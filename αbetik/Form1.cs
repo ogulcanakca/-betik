@@ -52,9 +52,19 @@ namespace αbetik
            
             if (Application.OpenForms["αbetik"] == null)
             {
-                αbetik.Show();
+                if(Convert.ToInt64(tbxTC.Text) > 9999999999 && Convert.ToInt64(tbxTC.Text) <= 99999999999)
+                {
+                    αbetik.Show();
+                    αbetik.tbxTCC.Text = tbxTC.Text;
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Az veya çok haneli TC girildi ya da boş bırakıldı.");
+                }
             }
-            this.Hide();
+            
+
             //ayarlar.Show();
             //αbetik.btnAyarlar_Click(new object(), EventArgs.Empty);
             //}
@@ -76,7 +86,7 @@ namespace αbetik
         
         public void tbxTC_TextChanged(object sender, EventArgs e)
         {
-            αbetik.tbxTCC.Text = tbxTC.Text;
+           
 
 
 
