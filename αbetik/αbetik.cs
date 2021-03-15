@@ -167,9 +167,13 @@ namespace αbetik
 
         public void btnAyarlar_Click(object sender, EventArgs e)
         {
-            //if (Application.OpenForms["Ayarlar"] == null)
-            //{
+            if (Application.OpenForms["Ayarlar"] == null)
+            {
                 ayarlar.Show();
+            }
+            //else
+            //{
+            //    ayarlar.Show();
             //}
             if (!String.IsNullOrEmpty(tbxTCC.Text))
             {
@@ -183,13 +187,10 @@ namespace αbetik
             ayarlar.tbxTCCC.Text = tbxTCC.Text;
             if (Application.OpenForms["Ayarlar"] != null)
             {
-                //ayarlar.Hide();
 
-                //ayarlar.Hide();
-                
                 ayarlar.Show();
-
             }
+
             //if (!String.IsNullOrEmpty(ayarlar.tbxTC.Text))
             //{
             //    ayarlar.dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(Convert.ToInt64(ayarlar.tbxTC.Text));

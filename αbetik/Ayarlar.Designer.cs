@@ -42,7 +42,6 @@
             this.tbxTC = new System.Windows.Forms.TextBox();
             this.tbxId = new System.Windows.Forms.TextBox();
             this.gbxFeatures = new System.Windows.Forms.GroupBox();
-            this.tbxTCC = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
@@ -120,7 +119,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(296, 12);
+            this.btnAdd.Location = new System.Drawing.Point(296, 17);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(87, 22);
             this.btnAdd.TabIndex = 6;
@@ -130,7 +129,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(296, 35);
+            this.btnDelete.Location = new System.Drawing.Point(296, 40);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(87, 22);
             this.btnDelete.TabIndex = 7;
@@ -140,7 +139,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(203, 12);
+            this.btnUpdate.Location = new System.Drawing.Point(203, 17);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(87, 22);
             this.btnUpdate.TabIndex = 8;
@@ -150,7 +149,7 @@
             // 
             // btnPublish
             // 
-            this.btnPublish.Location = new System.Drawing.Point(203, 35);
+            this.btnPublish.Location = new System.Drawing.Point(203, 40);
             this.btnPublish.Name = "btnPublish";
             this.btnPublish.Size = new System.Drawing.Size(87, 22);
             this.btnPublish.TabIndex = 9;
@@ -160,21 +159,21 @@
             // 
             // tbxTC
             // 
-            this.tbxTC.Location = new System.Drawing.Point(96, 19);
+            this.tbxTC.Location = new System.Drawing.Point(31, 41);
             this.tbxTC.Name = "tbxTC";
             this.tbxTC.Size = new System.Drawing.Size(79, 20);
             this.tbxTC.TabIndex = 10;
             // 
             // tbxId
             // 
-            this.tbxId.Location = new System.Drawing.Point(45, 18);
+            this.tbxId.Location = new System.Drawing.Point(31, 15);
             this.tbxId.Name = "tbxId";
-            this.tbxId.Size = new System.Drawing.Size(24, 20);
+            this.tbxId.ReadOnly = true;
+            this.tbxId.Size = new System.Drawing.Size(79, 20);
             this.tbxId.TabIndex = 12;
             // 
             // gbxFeatures
             // 
-            this.gbxFeatures.Controls.Add(this.tbxTCC);
             this.gbxFeatures.Controls.Add(this.lblSearch);
             this.gbxFeatures.Controls.Add(this.tbxId);
             this.gbxFeatures.Controls.Add(this.tbxTC);
@@ -192,26 +191,19 @@
             this.gbxFeatures.TabStop = false;
             this.gbxFeatures.Text = "İşlemler";
             // 
-            // tbxTCC
-            // 
-            this.tbxTCC.Location = new System.Drawing.Point(25, 42);
-            this.tbxTCC.Name = "tbxTCC";
-            this.tbxTCC.Size = new System.Drawing.Size(79, 20);
-            this.tbxTCC.TabIndex = 17;
-            // 
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(117, 45);
+            this.lblSearch.Location = new System.Drawing.Point(139, 26);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(23, 13);
+            this.lblSearch.Size = new System.Drawing.Size(35, 13);
             this.lblSearch.TabIndex = 16;
-            this.lblSearch.Text = "Ara";
+            this.lblSearch.Text = "Id Ara";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(67, 21);
+            this.label1.Location = new System.Drawing.Point(2, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 15;
@@ -220,7 +212,7 @@
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(22, 21);
+            this.lblId.Location = new System.Drawing.Point(3, 18);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(22, 13);
             this.lblId.TabIndex = 14;
@@ -228,9 +220,9 @@
             // 
             // tbxSearchId
             // 
-            this.tbxSearchId.Location = new System.Drawing.Point(146, 42);
+            this.tbxSearchId.Location = new System.Drawing.Point(116, 41);
             this.tbxSearchId.Name = "tbxSearchId";
-            this.tbxSearchId.Size = new System.Drawing.Size(24, 20);
+            this.tbxSearchId.Size = new System.Drawing.Size(79, 20);
             this.tbxSearchId.TabIndex = 13;
             this.tbxSearchId.TextChanged += new System.EventHandler(this.tbxSearchId_TextChanged);
             // 
@@ -240,6 +232,7 @@
             this.tbxTCCC.Name = "tbxTCCC";
             this.tbxTCCC.Size = new System.Drawing.Size(100, 20);
             this.tbxTCCC.TabIndex = 14;
+            this.tbxTCCC.Visible = false;
             this.tbxTCCC.TextChanged += new System.EventHandler(this.tbxTCCC_TextChanged);
             // 
             // Ayarlar
@@ -286,7 +279,6 @@
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label lblId;
         public System.Windows.Forms.DataGridView dgwRules;
-        public System.Windows.Forms.TextBox tbxTCC;
         public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Button btnMin;

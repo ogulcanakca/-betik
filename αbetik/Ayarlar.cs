@@ -63,7 +63,7 @@ namespace αbetik
             {
                 _iManagerPanelInformationService.Add(new ManagerPanelInformation
                 {
-                    Id = Convert.ToInt32(tbxId.Text),
+                    
                     TC = Convert.ToInt64(tbxTC.Text),
                     Kurallar = tbxRules.Text
                 });
@@ -75,15 +75,25 @@ namespace αbetik
                 MessageBox.Show(exception.Message);
             }
 
+            if (!String.IsNullOrEmpty(tbxTCCC.Text))
+            {
+                dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(Convert.ToInt64(tbxTCCC.Text));
 
+            }
+            
             //this.Controls.Clear();
             //this.InitializeComponent();
 
             //dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(Convert.ToInt64(tbxTCCC.Text));
-            αbetik αbetik = new αbetik();
-            αbetik.btnAyarlar_Click(new object(), EventArgs.Empty);
-            tbxTCCC.Text = αbetik.tbxTCC.Text;
-            this.Hide();
+            //αbetik αbetik = new αbetik();
+            //btnClose_Click(new object(), EventArgs.Empty);
+            //this.Hide();
+            //this.Controls.Clear();
+            //this.InitializeComponent();
+            //αbetik.btnAyarlar_Click(new object(), EventArgs.Empty);
+            //tbxTCCC.Text = αbetik.tbxTCC.Text;
+            //this.Show();
+
             //idGetir();
 
         }
@@ -126,7 +136,11 @@ namespace αbetik
             }
 
 
-            idGetir();
+            if (!String.IsNullOrEmpty(tbxTCCC.Text))
+            {
+                dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(Convert.ToInt64(tbxTCCC.Text));
+
+            }
 
         }
 
@@ -159,7 +173,11 @@ namespace αbetik
             });
 
 
-            idGetir();
+            if (!String.IsNullOrEmpty(tbxTCCC.Text))
+            {
+                dgwRules.DataSource = _iManagerPanelInformationService.GetManagerPanelInformationByTC(Convert.ToInt64(tbxTCCC.Text));
+
+            }
         }
 
 
@@ -239,6 +257,8 @@ namespace αbetik
             {
                 idGetir();
             }
+
+
 
         }
     }
